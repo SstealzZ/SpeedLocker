@@ -20,4 +20,4 @@ if %ERRORLEVEL% == 0 (
     echo Failed to update registry. Please ensure you have administrative rights.
 )
 
-pause
+exit
