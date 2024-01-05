@@ -9,11 +9,11 @@ PrivilegesRequired=admin
 Source: "python-3.12.1-amd64.exe"; DestDir: "{tmp}"; Flags: deleteafterinstall
 
 ; Include your application files (assuming you've already cloned your repo locally)
-Source: "SpeedLocker"; DestDir: "{app}"; Flags: recursesubdirs createallsubdirs
+Source: "SpeedLocker\*"; DestDir: "{app}"; Flags: recursesubdirs createallsubdirs
 
 [Run]
 ; Run the Python installer
 Filename: "{tmp}\python-3.12.1-amd64.exe"; Parameters: "/quiet InstallAllUsers=1 PrependPath=1"; StatusMsg: "Installing Python..."; Flags: waituntilterminated
 
 ; Run your application
-Filename: "{app}\Script\Installation.bat"; Parameters: ""; StatusMsg: "Running SpeedLocker Installer..."; Flags: waituntilterminated
+Filename: "{app}\Script\Installation.bat"; Parameters: ""; StatusMsg: "Running SpeedLocker Installer..."; Flags: runascurrentuser waituntilterminated
