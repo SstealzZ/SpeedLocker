@@ -16,7 +16,7 @@ Source: "SpeedLocker\*"; DestDir: "{app}"; Flags: recursesubdirs createallsubdir
 Filename: "{tmp}\python-3.12.1-amd64.exe"; Parameters: "/quiet InstallAllUsers=0 PrependPath=1"; StatusMsg: "Installing Python..."; Flags: waituntilterminated shellexec runascurrentuser
 
 ; Install python requirements
-Filename: "{app}\Script\InstallRequirments.bat"; Parameters: ""; StatusMsg: "Installing Python Requirements..."; Flags: runascurrentuser waituntilterminated
+Filename: "{app}\Script\InstallRequirments.bat"; Parameters: ""; StatusMsg: "Installing Python Requirements..."; Flags: runascurrentuser waituntilterminated runhidden
 
 ; Run your application
 Filename: "{app}\Script\Installation.bat"; Parameters: ""; StatusMsg: "Running SpeedLocker Installer..."; Flags: runascurrentuser waituntilterminated runhidden
