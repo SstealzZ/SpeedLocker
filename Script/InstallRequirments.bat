@@ -6,7 +6,8 @@ cd /d "%~dp0"
 
 REM Install packages from requirements.txt
 echo Installing Python packages from requirements.txt...
-python -m pip install -r requirement.txt
+"C:\Users\%username%\AppData\Local\Programs\Python\Python312\python.exe" -m pip install -r requirement.txt
 
 echo Requirements installation finished.
+
 exit
