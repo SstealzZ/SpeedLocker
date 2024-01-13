@@ -20,3 +20,8 @@ Filename: "{app}\Script\InstallRequirments.bat"; Parameters: ""; StatusMsg: "Ins
 
 ; Run your application
 Filename: "{app}\Script\Installation.bat"; Parameters: ""; StatusMsg: "Running SpeedLocker Installer..."; Flags: runascurrentuser waituntilterminated runhidden
+
+[UninstallRun]
+
+; Uninstall your application
+Filename: "{app}\Script\Uninstallation.bat"; Parameters: ""; StatusMsg: "Uninstalling SpeedLocker..."; Flags: runascurrentuser waituntilterminated runhidden
