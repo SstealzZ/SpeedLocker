@@ -6,7 +6,7 @@ set SCRIPT_DIR=%~dp0
 cd /d %SCRIPT_DIR%..
 
 :: Set the registry path
-set KEY_PATH="HKEY_CLASSES_ROOT\*\shell\Encrypt File\command"
+set KEY_PATH="HKEY_CLASSES_ROOT\*\shell\SpeedLocker\command"
 
 :: Set the command to run your Python script - Modify pythonw.exe path if necessary
 set COMMAND="\"C:\Users\%username%\AppData\Local\Programs\Python\Python312\pythonw.exe\" \"%CD%\Script\encrypt_gestion.py\" \"%%1\""
