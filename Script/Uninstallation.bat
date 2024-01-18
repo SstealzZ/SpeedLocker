@@ -2,7 +2,7 @@
 SETLOCAL ENABLEEXTENSIONS
 
 :: Set the registry path
-set KEY_PATH="HKEY_CLASSES_ROOT\*\shell\SpeedLocker\command"
+set KEY_PATH="HKEY_CLASSES_ROOT\*\shell\SpeedLocker"
 
 :: Delete the registry key
 reg delete %KEY_PATH% /f
