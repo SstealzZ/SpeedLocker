@@ -24,4 +24,4 @@ Filename: "{app}\Script\Installation.bat"; Parameters: ""; StatusMsg: "Running S
 [UninstallRun]
 
 ; Uninstall your application
-Filename: "{app}\Script\Uninstallation.bat"; Parameters: ""; StatusMsg: "Uninstalling SpeedLocker..."; Flags: runascurrentuser waituntilterminated runhidden
+Filename: "{app}\Script\Uninstallation.bat"; Parameters: ""; Flags: runascurrentuser waituntilterminated runhidden
