@@ -7,6 +7,8 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 from cryptography.hazmat.backends import default_backend
 from cryptography.fernet import Fernet, InvalidToken
+import hashlib
+import platform
 
 # Fonction pour dériver une clé d'encryption à partir d'une phrase de passe
 def derive_key(password_provided, salt):
@@ -61,7 +63,7 @@ def on_decrypt_button_click():
 def process_file(operation):
     seed_phrase = entry.get()
     if seed_phrase:
-        salt = b'your_salt_here'  # Use a consistent salt
+        salt = b'b96f43b987ae4237780b6494d54986b6e48835da'
         key = derive_key(seed_phrase, salt)
         if os.path.isfile(file_path):
             operation(file_path, key)  # Call encrypt or decrypt based on the operation
