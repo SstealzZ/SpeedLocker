@@ -98,6 +98,9 @@ if __name__ == "__main__":
         action_button = tk.Button(root, text=button_text, command=button_command)
         action_button.pack()
 
+        # Bind the Enter key to the button's command
+        root.bind('<Return>', lambda event: action_button.invoke())
+
         root.mainloop()
     else:
         print("File path argument missing.")
