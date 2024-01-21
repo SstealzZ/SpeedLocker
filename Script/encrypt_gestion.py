@@ -77,14 +77,27 @@ if __name__ == "__main__":
         file_path = sys.argv[1]
         
         root = tk.Tk()
-        root.title("File Encryption/Decryption")
+        if file_path.endswith('.stz'):
+            root.title("Decrypt File")
+        else:
+            root.title("Encrypt File")
 
         label = tk.Label(root, text="Enter your seed phrase:")
         label.pack()
 
-        entry = tk.Entry(root)
+        entry = tk.Entry(root, width=40)
         entry.pack()
+
+        # Center the entry widget on the screen
+        screen_width = root.winfo_screenwidth()
+        screen_height = root.winfo_screenheight()
+        x_position = (screen_width - entry.winfo_reqwidth()) // 2
+        y_position = (screen_height - entry.winfo_reqheight()) // 2
+        root.geometry('+{}+{}'.format(x_position, y_position))
+
         entry.focus_set()
+
+
 
         # Determine whether to show encrypt or decrypt button based on file extension
         if file_path.endswith('.stz'):
